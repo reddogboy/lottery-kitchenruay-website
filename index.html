@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รวมเว็บหมาหมา @lottery_kitchenruay</title>
+    <!-- Tailwind CSS สำหรับการจัดเลย์เอาต์และดีไซน์ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Kanit สำหรับฟอนต์ภาษาไทยที่ดูทันสมัยอ่านง่าย -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome สำหรับไอคอนประกอบการเงิน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            /* สีพื้นหลังสีเขียวอ่อนนวลตา */
+            background-color: #f0fdf4; 
+        }
+
+        /* Glassmorphism Effect - กล่องโปร่งแสง */
+        .glass-container {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.15);
+        }
+
+        /* เอฟเฟกต์ปุ่มตอนโฮเวอร์ (เอาเมาส์ชี้) */
+        .link-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .link-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 15px 30px -10px rgba(16, 185, 129, 0.3);
+            border-color: #34d399;
+        }
+
+        /* แอนิเมชันลูกแก้วสีเขียวลอยไปมาด้านหลัง */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 8s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+        
+        /* ขอบโลโก้วิบวับเบาๆ */
+        .avatar-border {
+            box-shadow: 0 0 0 4px #fff, 0 0 20px rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body class="min-h-screen relative overflow-hidden flex items-center justify-center p-4">
+
+    <!-- กราฟิกตกแต่งพื้นหลัง (Blob) ให้ดูทันสมัยและดึงดูด -->
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
+    <div class="absolute top-[20%] right-[-5%] w-80 h-80 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-[-10%] left-[20%] w-80 h-80 bg-teal-100 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-4000"></div>
+
+    <!-- คอนเทนเนอร์หลัก (เนื้อหา) -->
+    <main class="glass-container relative z-10 w-full max-w-lg rounded-[2.5rem] p-8 md:p-10 flex flex-col items-center">
+        
+        <!-- ส่วนรูปโปรไฟล์ / โลโก้ -->
+        <div class="w-32 h-32 md:w-36 md:h-36 mb-5 rounded-full overflow-hidden avatar-border relative bg-white flex-shrink-0 z-20">
+            <img src="image.png" alt="รวมเว็บหมาหมา" class="w-full h-full object-cover">
+        </div>
+
+        <!-- ชื่อ Header และ Subtitle -->
+        <div class="text-center mb-8">
+            <h1 class="text-2xl md:text-3xl font-semibold text-emerald-900 mb-1 tracking-wide">
+                รวมเว็บหมาหมา
+            </h1>
+            <a href="https://www.instagram.com/lottery_kitchenruay?xtok=Ynl6aHR2YWtjdzdw&utm_source=qr" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-emerald-100/80 text-emerald-700 font-medium text-sm border border-emerald-200 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-all duration-300 cursor-pointer shadow-sm">
+                <!-- ไอคอน Instagram -->
+                <i class="fa-brands fa-instagram mr-2 text-base"></i> 
+                @lottery_kitchenruay
+            </a>
+        </div>
+
+        <!-- กลุ่มปุ่มลิงก์ต่างๆ -->
+        <div class="w-full flex flex-col gap-4">
+            
+            <!-- ลิงก์ที่ 1: โปรแกรมคำนวณเงินลงทุน -->
+            <a href="https://reddogboy.github.io/retirement-and-investment-planner/" target="_blank" rel="noopener noreferrer" 
+               class="link-card group flex items-center p-4 bg-white rounded-2xl border-2 border-transparent">
+                <!-- ไอคอน -->
+                <div class="w-14 h-14 flex-shrink-0 bg-emerald-50 text-emerald-500 rounded-xl flex items-center justify-center text-2xl group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <!-- ข้อความ -->
+                <div class="ml-4 flex-grow">
+                    <h2 class="text-base font-medium text-gray-700 group-hover:text-emerald-900 transition-colors leading-snug">
+                        โปรแกรมคำนวณเงินลงทุนต่อเดือน <br><span class="text-sm text-gray-500 group-hover:text-emerald-700">เพื่อรอรับปันผลตอนเกษียณ</span>
+                    </h2>
+                </div>
+                <!-- ลูกศร -->
+                <div class="pl-2">
+                    <i class="fa-solid fa-chevron-right text-gray-300 group-hover:text-emerald-500 transition-colors"></i>
+                </div>
+            </a>
+
+            <!-- ลิงก์ที่ 2: จำลองการซื้อสลากกินแบ่งฯ -->
+            <a href="https://reddogboy.github.io/gov-lottery/" target="_blank" rel="noopener noreferrer" 
+               class="link-card group flex items-center p-4 bg-white rounded-2xl border-2 border-transparent">
+                <div class="w-14 h-14 flex-shrink-0 bg-emerald-50 text-emerald-500 rounded-xl flex items-center justify-center text-2xl group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                </div>
+                <div class="ml-4 flex-grow">
+                    <h2 class="text-base font-medium text-gray-700 group-hover:text-emerald-900 transition-colors leading-snug">
+                        จำลองการซื้อสลากกินแบ่งฯ <br><span class="text-sm text-gray-500 group-hover:text-emerald-700">เทียบกับการลงทุนในดัชนี S&P 500</span>
+                    </h2>
+                </div>
+                <div class="pl-2">
+                    <i class="fa-solid fa-chevron-right text-gray-300 group-hover:text-emerald-500 transition-colors"></i>
+                </div>
+            </a>
+
+            <!-- ลิงก์ที่ 3: จำลองการซื้อหวย -->
+            <a href="https://reddogboy.github.io/lottery-game-by-red-doy/" target="_blank" rel="noopener noreferrer" 
+               class="link-card group flex items-center p-4 bg-white rounded-2xl border-2 border-transparent">
+                <div class="w-14 h-14 flex-shrink-0 bg-emerald-50 text-emerald-500 rounded-xl flex items-center justify-center text-2xl group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="ml-4 flex-grow">
+                    <h2 class="text-base font-medium text-gray-700 group-hover:text-emerald-900 transition-colors leading-snug">
+                        จำลองการซื้อหวย <br><span class="text-sm text-gray-500 group-hover:text-emerald-700">เทียบกับการลงทุนในดัชนี S&P 500</span>
+                    </h2>
+                </div>
+                <div class="pl-2">
+                    <i class="fa-solid fa-chevron-right text-gray-300 group-hover:text-emerald-500 transition-colors"></i>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Footer เล็กๆ ด้านล่าง -->
+        <div class="mt-10 flex items-center justify-center text-sm font-medium text-emerald-600/60">
+            <i class="fa-solid fa-leaf mr-2"></i> Financial & Investment Tools
+        </div>
+
+    </main>
+
+</body>
+</html>
