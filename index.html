@@ -60,7 +60,8 @@
         }
     </style>
 </head>
-<body class="min-h-screen relative overflow-hidden flex items-center justify-center p-4">
+<!-- แก้ไขตรง class ของ body จาก overflow-hidden เป็น overflow-x-hidden และปรับ padding -->
+<body class="min-h-screen relative overflow-x-hidden flex justify-center py-10 px-4 md:items-center">
 
     <!-- กราฟิกตกแต่งพื้นหลัง (Blob) ให้ดูทันสมัยและดึงดูด -->
     <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
@@ -68,7 +69,7 @@
     <div class="absolute bottom-[-10%] left-[20%] w-80 h-80 bg-teal-100 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-4000"></div>
 
     <!-- คอนเทนเนอร์หลัก (เนื้อหา) -->
-    <main class="glass-container relative z-10 w-full max-w-lg rounded-[2.5rem] p-8 md:p-10 flex flex-col items-center">
+    <main class="glass-container relative z-10 w-full max-w-lg rounded-[2.5rem] p-8 md:p-10 flex flex-col items-center my-auto">
         
         <!-- ส่วนรูปโปรไฟล์ / โลโก้ -->
         <div class="w-32 h-32 md:w-36 md:h-36 mb-5 rounded-full overflow-hidden avatar-border relative bg-white flex-shrink-0 z-20">
